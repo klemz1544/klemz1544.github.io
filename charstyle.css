@@ -1,0 +1,154 @@
+nav {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  background-color: transparent !important;  
+  box-shadow: none;
+  height: 50px;
+  padding-right: 30px;
+  font-family: "Maven Pro", sans-serif;
+  font-size: 18px;
+  position: fixed;
+  z-index: 1;
+  right: 0;
+  left: 0;
+}
+
+nav:hover {
+  box-shadow: 0px 0px 10px rgba(0,0,0,0.5);
+}
+
+nav a {
+  color: #393636;
+  text-decoration: none;
+  margin-left: 40px;
+  transition: font-weight 0s ease-in-out, color 0s ease-in-out;
+  position: relative;
+  z-index: 2;
+}
+
+nav a.current,
+nav a.current:hover {
+  font-weight: bold;
+  color: #393636;
+  position: relative;
+  z-index: 2;
+}
+
+nav a:not(.current):hover {
+  color: #f9f9f9;
+}
+
+nav a.current:hover:before {
+  background-color: transparent;
+}
+
+nav a:not(.current):hover:before {
+  content: "";
+  position: absolute;
+  top: -3px;
+  right: -3px;
+  bottom: -3px;
+  left: -3px;
+  background-color: #393636;
+  border-radius: 3px;
+  z-index: -1;
+}
+
+/* Page Header Styles */
+header {
+  text-align: center;
+  background-image: url("https://cdn.discordapp.com/attachments/798788670035066880/1085228552569491476/image.png");
+  background-repeat: no-repeat;
+  background-size: cover;       
+	color: #f9f9f9;
+	padding: 200px;
+}
+
+.header-container {
+	max-width: 1200px;
+	margin: 0 auto;
+	display: flex;
+	align-items: center
+}
+
+.header-title {
+  text-align: center;
+	font-size: 26px;
+	font-weight: bold;
+  margin: 0 auto;
+}
+
+.divider {
+  background-color: #393636;
+  height: 5px;
+  margin: 10px 0px;
+}
+
+/* Card Styles */
+.card-container {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+	padding: 50px 0;
+  background-color: #393636;
+}
+
+#card {
+  text-align: center;
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+
+.card img {
+	width: 100%;
+	height: 360px;
+  object-fit: cover;
+}
+
+.card {
+	position: relative;
+	width: 260px;
+	height: 360px;
+	background-color: transparent;
+	box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.5);
+	border-radius: 10px;
+	overflow: hidden;
+	transition: all 0.2s ease-in-out;
+	margin: 10px;
+  border: 3px solid #1c1c1c;
+}
+
+.card:hover {
+	transform: translateY(-10px);
+	box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.5);
+}
+
+.card-info {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+  text-align: center;
+  color: #f9f9f9;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.card-info h2 {
+  font-weight: normal;
+  margin-bottom: 5px;
+}
+
+.card-info p {
+  margin-top: 5px;
+}
+
+body {
+  margin: 0 !important;
+  padding: 0 !important;
+} 
+
+.navbar-scrolled {
+  background-color: #f9f9f9 !important;
+}

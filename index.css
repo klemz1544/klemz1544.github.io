@@ -1,0 +1,169 @@
+nav {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  background-color: transparent !important;  
+  box-shadow: none;
+  height: 50px;
+  padding-right: 30px;
+  font-family: "Maven Pro", sans-serif;
+  font-size: 18px;
+  position: fixed;
+  z-index: 1;
+  right: 0;
+  left: 0;
+}
+
+nav:hover {
+  box-shadow: 0px 0px 10px rgba(0,0,0,0.5);
+}
+  
+nav a {
+  color: #393636;
+  text-decoration: none;
+  margin-left: 40px;
+  transition: font-weight 0s ease-in-out, color 0s ease-in-out;
+  position: relative;
+  z-index: 2;
+}
+  
+nav a.current,
+nav a.current:hover {
+  font-weight: bold;
+  color: #393636;
+  position: relative;
+  z-index: 2;
+}
+  
+nav a:not(.current):hover {
+  color: #f9f9f9;
+}
+  
+nav a.current:hover:before {
+  background-color: transparent;
+}
+  
+nav a:not(.current):hover:before {
+  content: "";
+  position: absolute;
+  top: -3px;
+  right: -3px;
+  bottom: -3px;
+  left: -3px;
+  background-color: #393636;
+  border-radius: 3px;
+  z-index: -1;
+}
+  
+/* Page Header Styles */
+header {
+  text-align: center;
+  background-image: url("https://cdn.discordapp.com/attachments/798788670035066880/1085228552569491476/image.png");
+  background-repeat: no-repeat;
+  background-size: cover;       
+    color: #f9f9f9; 
+    padding: 200px;
+} 
+  
+.header-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center
+}
+  
+.header-title {
+  text-align: center;
+    font-size: 26px;
+    font-weight: bold;
+  margin: 0 auto;
+}
+  
+.divider {
+  background-color: #393636;
+  height: 5px;
+  margin: 10px 0px;
+}
+
+/* Default styling for all sections */
+section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px;
+    box-sizing: border-box;
+    overflow: hidden;
+  }
+  
+  .section-container {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px;
+  }
+  
+  /* Styling for odd-numbered sections */
+  section:nth-child(odd) .text-container {
+    order: 1;
+    text-align: right;
+    padding: 0 50px 0 0; 
+  }
+  
+  section:nth-child(odd) .image-container {
+    order: 2;
+    text-align: left;
+    width: 50%;
+    justify-content: flex-start;
+  }
+  
+  /* Styling for even-numbered sections */
+  section:nth-child(even) .text-container {
+    order: 2;
+    text-align: left;
+    padding: 0 0 0 50px;
+  }
+  
+  section:nth-child(even) .image-container {
+    order: 1;
+    text-align: right;
+    width: 50%;
+    justify-content: flex-end;
+  }
+  
+  /* Styling for all image containers */
+  .image-container {
+    width: 50%;
+  }
+  
+  .image-container img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+  }
+  
+  /* Styling for all text containers */
+  .text-container {
+    width: 50%;
+    text-align: justify;
+  }
+  
+  .text-container h2 {
+    margin-top: 0;
+    margin-bottom: 20px;
+  }
+  
+  /* Styling for the main container */
+  main {
+    background-color: #393636;
+    color: #f9f9f9;
+    
+  }
+
+  body {
+    margin: 0 !important;
+    padding: 0 !important;
+  } 
+
+  .navbar-scrolled {
+    background-color: #f9f9f9 !important;
+  }
